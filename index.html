@@ -3,64 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphism Design</title>
+    <title>Astra AI V1</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Reset and Global Styles */
         body {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
         }
-        form {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
         }
-        form:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
+        /* Glassmorphism Effect */
+        .glass {
             background: rgba(255, 255, 255, 0.2);
-            transition: background 0.3s ease;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        input:focus, textarea:focus {
-            background: rgba(255, 255, 255, 0.4);
-            outline: none;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
         }
-        button {
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background 0.3s ease;
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
         }
-        button:hover {
-            background: #0056b3;
+        .features, .testimonials, .footer {
+            padding: 2rem 0;
+            text-align: center;
+        }
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <form>
-        <h2>Contact Us</h2>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+    <nav class="navbar glass">
+        <div class="logo">Astra AI</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="hero glass fade-in">
+        <h1>Welcome to Astra AI</h1>
+        <p>Your AI-powered solution for modern problems.</p>
+        <a href="#features" class="btn">Learn More</a>
+    </header>
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-list">
+            <div class="feature glass fade-in">Feature 1</div>
+            <div class="feature glass fade-in">Feature 2</div>
+            <div class="feature glass fade-in">Feature 3</div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-list">
+            <blockquote class="glass fade-in">"Astra AI revolutionized my workflow!" - User 1</blockquote>
+            <blockquote class="glass fade-in">"Incredible features and usability!" - User 2</blockquote>
+        </div>
+    </section>
+    <footer class="footer glass">
+        <p>&copy; 2026 Astra AI. All rights reserved.</p>
+    </footer>
 </body>
 </html>
