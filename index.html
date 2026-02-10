@@ -3,88 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astra AI V1</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Reset and Global Styles */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: #f0f0f0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 1rem;
-        }
-        /* Glassmorphism Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-        .hero {
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            background: url('hero-bg.jpg') no-repeat center center/cover;
-        }
-        .features, .testimonials, .footer {
-            padding: 2rem 0;
-            text-align: center;
-        }
-        /* Animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <title>Astra AI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar glass">
-        <div class="logo">Astra AI</div>
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <header class="hero glass fade-in">
+    <header>
         <h1>Welcome to Astra AI</h1>
-        <p>Your AI-powered solution for modern problems.</p>
-        <a href="#features" class="btn">Learn More</a>
+        <div class="model-selection">
+            <label for="model">Choose a model:</label>
+            <select id="model">
+                <option value="astra-2.5">Astra 2.5</option>
+                <option value="astra-3.0-pro">Astra 3.0 Pro</option>
+            </select>
+        </div>
+        <div class="avatar">
+            <img src="src/avatar.png" alt="User Avatar">
+        </div>
+        <div class="spinner">
+            <img src="src/spinner.svg" alt="Loading Spinner">
+        </div>
     </header>
-    <section id="features" class="features">
-        <h2>Features</h2>
-        <div class="feature-list">
-            <div class="feature glass fade-in">Feature 1</div>
-            <div class="feature glass fade-in">Feature 2</div>
-            <div class="feature glass fade-in">Feature 3</div>
-        </div>
-    </section>
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Users Say</h2>
-        <div class="testimonials-list">
-            <blockquote class="glass fade-in">"Astra AI revolutionized my workflow!" - User 1</blockquote>
-            <blockquote class="glass fade-in">"Incredible features and usability!" - User 2</blockquote>
-        </div>
-    </section>
-    <footer class="footer glass">
+    <main>
+        <p>This is the redesigned Astra AI interface.</p>
+    </main>
+    <footer>
         <p>&copy; 2026 Astra AI. All rights reserved.</p>
     </footer>
 </body>
